@@ -73,7 +73,7 @@ const MiddleMenus = () => {
           >
             <div className={styles.menuItemName}>{name}</div>
             {showNew && <span className={styles.newTag}>NEW</span>}
-            {to === '/pricing' && <CutPriceSvg className={styles.cutPrice} />}
+            {to === '/pricing' }
           </NavLink>
         </MediaQuery>
       ))}

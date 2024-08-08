@@ -13,6 +13,7 @@ const MENUS = [
     name: 'Practice',
     to: '/practice',
     anyAccess: true,
+    dev: true,
     minWidth: 520,
   },
   {

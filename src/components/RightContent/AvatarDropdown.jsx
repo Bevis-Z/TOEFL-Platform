@@ -43,7 +43,7 @@ const AvatarDropdown = () => {
           toggle()
         }}
       >
-        免费登录
+        Sign In
       </Button>
     </span>
   )

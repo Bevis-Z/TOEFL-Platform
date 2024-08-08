@@ -19,6 +19,7 @@ const showWaitModal = (subject) => {
     ),
     icon: null,
     closable: true,
+    okText: 'ok',
     okButtonProps: {
       className: styles.okButton,
     },

@@ -156,6 +156,7 @@ const LoginModal = () => {
       footer={null}
       centered
       maskClosable={false}
+      okText={"Login"}
       className={styles.modal}
       onCancel={toggle}
       afterClose={onAfterClose}
@@ -191,6 +192,7 @@ const LoginModal = () => {
               size="large"
               submitter={{
                 submitButtonProps: { shape: 'round', block: true, className: styles.formButton },
+                searchConfig: { submitText: 'Login', }
               }}
               onFinish={async (values) => {
                 await handleSubmit(values)
@@ -250,11 +252,19 @@ const LoginModal = () => {
                   placeholder="Code"
                   // 如果需要失败可以 throw 一个错误出来，onGetCaptcha 会自动停止
                   // throw new Error("获取验证码错误")
+                  countDown={60} // 设置倒计时60秒
+                  captchaTextRender={(timing, count) => {
+                    if (timing) {
+                      return `${count} s`;
+                    }
+                    return 'Send Code';
+                  }}                  
+
                   onGetCaptcha={async (phone) => {
                     const phoneReg = /^1[3-9]\d{9}$/
                     if (!phoneReg.test(phone)) {
                       formRef.current?.setFields?.([
-                        { errors: ['请填写正确的手机号'], name: ['PhoneNumber'] },
+                        { errors: ['Please Input correct phone number'], name: ['PhoneNumber'] },
                       ])
                       throw new Error('非法手机号')
                     }
@@ -263,7 +273,7 @@ const LoginModal = () => {
                       const { Code } = await postValidateCode({ PhoneNumber: encryption(phone) })
                       if (Code !== 'Succeed') return
 
-                      message.success(`手机号 ${phone} 验证码发送成功`)
+                      message.success(`${phone} Verification code sent successfully`)
                     } catch (err) {
                       console.log(err)
                     }
