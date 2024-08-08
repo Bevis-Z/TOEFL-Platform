@@ -13,17 +13,17 @@ const comments = [
     name: 'Student Zhou',
     score: '112',
     comment:
-      '备考时走了不少弯路，但最终还是取得了不错的结果！托福来了的精选题目一直都有在更新，降低了我的备考材料选择成本',
+      'This platform is really helpful for me to improve my TOEFL score. I got 112 finally!',
     universals: ['CU', 'Brown U', 'UCLA'],
-    tag: '美/加混申请选手',
+    tag: 'USA/CA',
   },
   {
     avatar: avatarDing,
     name: 'Student Ding',
     score: '113',
-    comment: '备考阶段大量的刷题帮我突破了瓶颈，而托福来了就是最好的海量题库提供方。',
+    comment: 'Immversive learning experience! I got 113 in my first TOEFL test!',
     universals: ['NYU', 'WUSTL', 'HKUST'],
-    tag: '美/欧/香混申选手',
+    tag: 'EU/US/HK',
   },
   {
     avatar: avatarZhu,
