@@ -1,0 +1,142 @@
+@import (reference) '~@/styles/variables.less';
+
+.showHowWrap {
+  max-width: @layout-max-width;
+  margin: 100px auto 0;
+  padding: 0 20px;
+}
+
+.trans {
+  transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+.bookWrap {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  .title {
+    margin-top: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 28px;
+  }
+  .desc {
+    margin-top: 20px;
+    color: fade(white, 80%);
+    font-size: 14px;
+  }
+  .tag {
+    padding: 4px 8px;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: fade(white, 20%);
+    border-radius: 6px;
+  }
+
+  .frontend {
+    .trans();
+
+    position: relative;
+    z-index: 1;
+    width: 240px;
+    height: 260px;
+    padding: 24px;
+    border-radius: 0 30px 40px 40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 40px 80px, rgba(255, 255, 255, 0.15) 0 0 0 0.5px inset;
+    backdrop-filter: blur(40px);
+  }
+  .backend {
+    .trans();
+
+    position: absolute;
+    top: 0;
+    width: 220px;
+    height: 260px;
+    border-radius: 0 40px 40px;
+    transform: skewY(8deg);
+    transform-origin: left top;
+  }
+
+  &:hover {
+    .frontend {
+      box-shadow: rgba(0, 0, 0, 0.25) 0 100px 100px, rgba(255, 255, 255, 0.15) 0 0 0 0.5px inset;
+      transform: translateY(-3px);
+    }
+    .backend {
+      width: 200px;
+      transform: skewY(15deg);
+    }
+  }
+}
+
+.trueBook {
+  .frontend {
+    background: rgba(31, 31, 71, 0.6);
+  }
+  .backend {
+    background: linear-gradient(rgb(64, 141, 213) 0%, rgb(99, 11, 140) 100%);
+  }
+}
+.tpoBook {
+  .frontend {
+    background: rgba(31, 31, 71, 0.6);
+  }
+  .backend {
+    background: linear-gradient(rgb(192, 52, 149) 0%, rgb(76, 36, 214) 100%);
+  }
+}
+
+.videoWrap {
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 40px 80px;
+}
+
+.videoHeader {
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px 16px 0 0;
+
+  .dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &.red {
+      background-color: fade(#ff605c, 90%);
+    }
+    &.yellow {
+      background-color: fade(#ffbd44, 90%);
+    }
+    &.green {
+      background-color: fade(#00ca4e, 90%);
+    }
+  }
+}
+
+.video {
+  display: block;
+  width: 100%;
+  border-radius: 0 0 16px 16px;
+}
+
+.tinyBars {
+  position: absolute;
+  right: 18px;
+  bottom: 12px;
+  width: 80%;
+  .tinyBarsItem {
+    height: 4px;
+    margin-top: 4px;
+    background-color: fade(white, 10%);
+    border-radius: 2px;
+  }
+}
+
+@-moz-document url-prefix('') {
+  .bookWrap {
+    .frontend {
+      background: rgba(31, 31, 71, 0.96);
+    }
+  }
+}

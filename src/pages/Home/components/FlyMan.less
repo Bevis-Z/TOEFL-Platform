@@ -1,0 +1,116 @@
+@import (reference) '~@/styles/variables.less';
+
+.flymanWrap {
+  max-width: @layout-max-width;
+  margin: 50px auto 50px;
+  padding: 0 20px;
+}
+.title {
+  color: fade(white, 90%);
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+}
+.subTitle {
+  margin-top: 30px;
+  color: fade(white, 70%);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.modelWrap {
+  display: flex;
+  justify-content: center;
+  margin: 90px 0;
+
+  .imagesWrap {
+    position: relative;
+    width: 42%;
+    cursor: pointer;
+
+    .model {
+      width: 100%;
+      animation: floating 2.9s ease-in-out 0.1s infinite;
+    }
+    .part1 {
+      position: absolute;
+      top: 6%;
+      left: -44%;
+      width: 45%;
+      max-width: 200px;
+      transition: all 1s;
+      animation: floating 2.8s ease-in-out 0.8s infinite;
+    }
+    .part2 {
+      position: absolute;
+      top: 4%;
+      right: -46%;
+      width: 42%;
+      max-width: 150px;
+      transition: all 1s;
+      animation: floating 3s ease-in-out 0.6s infinite;
+    }
+    .part3 {
+      position: absolute;
+      top: 40%;
+      left: -40%;
+      width: 40%;
+      max-width: 150px;
+      transition: all 1s;
+      animation: floating 2.8s ease-in-out 0.6s infinite;
+    }
+    .part4 {
+      position: absolute;
+      top: 40%;
+      right: -40%;
+      width: 40%;
+      max-width: 174px;
+      transition: all 1s;
+      animation: floating 2.6s ease-in-out 0.8s infinite;
+    }
+    .part5 {
+      position: absolute;
+      right: -34%;
+      bottom: 4%;
+      width: 18%;
+      max-width: 86px;
+      border-radius: 50%;
+      transition: all 1s;
+      animation: floating 2.5s ease-in-out 0.3s infinite;
+    }
+
+    &:hover {
+      .part1 {
+        top: 2%;
+        left: -56%;
+      }
+      .part2 {
+        top: 1%;
+        right: -54%;
+      }
+      .part3 {
+        top: 28%;
+        left: -50%;
+      }
+      .part4 {
+        top: 30%;
+        right: -50%;
+      }
+      .part5 {
+        bottom: 8%;
+      }
+    }
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-50px) rotate(3deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}

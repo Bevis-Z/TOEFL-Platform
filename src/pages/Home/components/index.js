@@ -1,0 +1,5 @@
+export { default as Mockups } from './Mockups'
+export { default as Slogan } from './Slogan'
+export { default as CommentCards } from './CommentCards'
+export { default as FlyMan } from './FlyMan'
+export { default as ShowHow } from './ShowHow'

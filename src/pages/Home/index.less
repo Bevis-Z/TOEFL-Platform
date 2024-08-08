@@ -1,0 +1,79 @@
+@import (reference) '~antd/es/style/themes/index';
+@import (reference) '~@/styles/variables.less';
+
+@default-bgc: rgb(31, 31, 71);
+
+.homeWrap {
+  overflow-x: hidden;
+  color: white;
+  background-color: @default-bgc;
+}
+
+.topSection {
+  position: relative;
+  min-height: 1000px;
+  background-image: url('~@/assets/bgimgs/home_first.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.starsWrap {
+  position: absolute;
+  width: 100%;
+  height: 260px;
+  background-image: url('~@/assets/bgimgs/home_stars.svg');
+  background-repeat: repeat;
+  background-position: center top;
+}
+
+.main {
+  position: relative;
+  z-index: 3;
+  max-width: @layout-max-width;
+  margin: 0 auto;
+  padding: @layout-header-height 20px 0;
+}
+
+.mainRow {
+  width: 100%;
+}
+
+.waveLightWrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 380px;
+  transform-origin: left top;
+}
+
+.waveWrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(rgba(31, 31, 71, 0.25) -18.72%, rgb(31, 31, 71) 37.6%);
+  transform-origin: left top;
+  clip-path: url('#clip');
+}
+
+.secondSection {
+  padding-bottom: 80px;
+}
+
+@media (min-width: 1400px) {
+  .waveWrap,
+  .waveLightWrap {
+    transform: scale(1.5);
+  }
+}
+@media (min-width: 2200px) {
+  .waveWrap,
+  .waveLightWrap {
+    transform: scale(2);
+  }
+}

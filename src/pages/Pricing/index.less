@@ -1,0 +1,280 @@
+@import (reference) '~antd/es/style/themes/index';
+@import (reference) '~@/styles/variables.less';
+
+.pricingWrap {
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #291963;
+  background-image: url('~@/assets/bgimgs/home_first.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.starsWrap {
+  position: absolute;
+  width: 100%;
+  height: 260px;
+  background-image: url('~@/assets/bgimgs/home_stars.svg');
+  background-repeat: repeat;
+  background-position: center top;
+}
+
+.content {
+  position: relative;
+  max-width: @layout-max-width;
+  margin: 0 auto;
+  padding: 140px 20px 100px;
+  color: fade(white, 80%);
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 24px;
+  color: fade(white, 90%);
+  font-weight: 600;
+  font-size: 34px;
+}
+
+.subtitle {
+  margin-bottom: 170px;
+  color: fade(white, 70%);
+  font-size: 14px;
+}
+
+.pricingCard {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 16px;
+
+  * {
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+  }
+
+  .frontend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+
+    .name {
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .amount {
+      color: white;
+      font-weight: 600;
+      font-size: 34px;
+
+      .symbol {
+        font-size: 24px;
+      }
+    }
+    .desc {
+      font-size: 18px;
+    }
+    .buyButton {
+      width: 158px;
+      height: 52px;
+      color: fade(black, 80%);
+      font-size: 16px;
+      background: linear-gradient(180deg, #fff 0%, #f2d0ff 100%);
+      border: 0.5px solid rgba(255, 255, 255, 0.5);
+      border-radius: 14px;
+      box-shadow: 0 3px 14px 0 rgba(145, 202, 236, 0.42);
+      transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+
+      &:hover {
+        box-shadow: 0 6px 18px 0 rgba(145, 202, 236, 0.48);
+        transform: translateY(-2px);
+      }
+    }
+    .shopIcon {
+      margin-right: 6px;
+    }
+  }
+
+  &:hover {
+    .frontend {
+      box-shadow: rgba(0, 0, 0, 0.25) 0 100px 100px, rgba(255, 255, 255, 0.15) 0 0 0 0.5px inset;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.card1 {
+  .backend {
+    position: absolute;
+    width: 100%;
+    max-width: 360px;
+    height: 426px;
+    background: linear-gradient(rgba(108, 207, 238, 0.5) 0%, rgba(76, 127, 228, 0.5) 100%);
+    border-radius: 0 56px 56px;
+    transform: skewY(-8deg);
+    transform-origin: left top;
+    // z-index: -1;
+  }
+  .frontend {
+    z-index: 2;
+    width: 100%;
+    min-width: 240px;
+    max-width: 360px;
+    height: 426px;
+    padding: 50px 20px;
+    background: rgba(31, 31, 71, 0.6);
+    border-radius: 0 56px 56px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 40px 80px, rgba(255, 255, 255, 0.15) 0 0 0 0.5px inset;
+    backdrop-filter: blur(40px);
+  }
+
+  &:hover {
+    .backend {
+      transform: skewY(-12deg) scaleX(0.94) translateY(-3px);
+    }
+  }
+}
+.card2 {
+  position: relative;
+  top: -120px;
+  .backend {
+    position: absolute;
+    width: 100%;
+    max-width: 380px;
+    height: 436px;
+    background: linear-gradient(rgb(47, 184, 255) 0%, rgb(158, 236, 217) 100%);
+    border-radius: 56px 56px 56px 0;
+    transform: skewY(8deg);
+    transform-origin: left bottom;
+  }
+  .frontend {
+    z-index: 2;
+    width: 100%;
+    min-width: 240px;
+    max-width: 380px;
+    height: 436px;
+    padding: 50px 20px;
+    background: rgba(31, 31, 71, 0.6);
+    border-radius: 56px 56px 56px 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 40px 80px, rgba(255, 255, 255, 0.15) 0 0 0 0.5px inset;
+    backdrop-filter: blur(40px);
+  }
+
+  &:hover {
+    .backend {
+      transform: skewY(12deg) scaleX(0.94) translateY(-3px);
+    }
+  }
+}
+.card3 {
+  position: relative;
+  top: -80px;
+  .backend {
+    position: absolute;
+    width: 100%;
+    max-width: 380px;
+    height: 426px;
+    background: linear-gradient(rgba(204, 154, 249, 0.5) 0%, rgba(163, 110, 249, 0.5) 100%);
+    border-radius: 56px 56px 56px 0;
+    transform: skewY(8deg);
+    transform-origin: left bottom;
+  }
+  .frontend {
+    z-index: 2;
+    width: 100%;
+    min-width: 240px;
+    max-width: 380px;
+    height: 426px;
+    padding: 50px 20px;
+    background: rgba(75, 75, 168, 0.6);
+    border-radius: 56px 56px 56px 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 40px 80px, rgba(255, 255, 255, 0.15) 0 0 0 0.5px inset;
+    backdrop-filter: blur(40px);
+  }
+
+  &:hover {
+    .backend {
+      transform: skewY(12deg) scaleX(0.94) translateY(-3px);
+    }
+  }
+}
+.card4 {
+  .backend {
+    position: absolute;
+    width: 100%;
+    max-width: 360px;
+    height: 426px;
+    background: linear-gradient(rgba(111, 214, 245, 0.5) 0%, rgba(80, 133, 239, 0.5) 100%);
+    border-radius: 0 56px 56px;
+    transform: skewY(-8deg);
+    transform-origin: left top;
+    // z-index: -1;
+  }
+  .frontend {
+    z-index: 2;
+    width: 100%;
+    min-width: 240px;
+    max-width: 360px;
+    height: 426px;
+    padding: 50px 20px;
+    background: rgba(43, 43, 99, 0.6);
+    border-radius: 0 56px 56px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 40px 80px, rgba(255, 255, 255, 0.15) 0 0 0 0.5px inset;
+    backdrop-filter: blur(40px);
+  }
+
+  &:hover {
+    .backend {
+      transform: skewY(-12deg) scaleX(0.94) translateY(-3px);
+    }
+  }
+}
+
+@media (max-width: @screen-md) {
+  .content {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .card2,
+  .card3 {
+    top: 0;
+  }
+}
+
+.container {
+  font-size: 16px;
+  :global {
+    .ant-modal-confirm-btns {
+      display: none;
+    }
+  }
+}
+
+@-moz-document url-prefix('') {
+  .card1 {
+    .frontend {
+      background-color: fade(#4d3899, 92%);
+    }
+  }
+
+  .card2 {
+    .frontend {
+      background-color: fade(#397694, 92%);
+    }
+  }
+
+  .card3 {
+    .frontend {
+      background-color: fade(#2c706b, 92%);
+    }
+  }
+
+  .card4 {
+    .frontend {
+      background-color: fade(#315687, 92%);
+    }
+  }
+}

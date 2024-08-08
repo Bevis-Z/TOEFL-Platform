@@ -1,0 +1,41 @@
+.modalWrap {
+  :global {
+    .ant-modal-confirm-btns {
+      width: 100%;
+    }
+  }
+}
+
+.title {
+  display: block;
+  color: fade(white, 80%);
+  text-align: center;
+}
+
+.content {
+  margin: 12px 0;
+  text-align: center;
+  img {
+    width: 100%;
+    max-width: 300px;
+    filter: brightness(1.18);
+  }
+}
+
+.okButton {
+  width: 100% !important;
+  height: 52px !important;
+  margin-bottom: 40px !important;
+  background: linear-gradient(270deg, #4743ff 0%, #ea89e9 100%) !important;
+  border: 0 none !important;
+  border-radius: 13px !important;
+  box-shadow: 0 8px 20px 0 rgba(228, 104, 255, 0.35) !important;
+  transition: all 0.6s !important;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(270deg, #4743ff 0%, #ea89e9 100%) !important;
+    box-shadow: 0 10px 40px 0 rgba(228, 104, 255, 0.35) !important;
+    transform: translateY(-2px) !important;
+  }
+}

@@ -1,0 +1,84 @@
+@import (reference) '~antd/es/style/themes/index';
+
+.pieceWrap {
+  height: 100%;
+  padding: 24px 24px;
+}
+
+.pieceLeft {
+  height: 100%;
+  padding-right: 24px;
+  padding-left: 8px;
+  overflow: auto;
+  border-right: 1px solid fade(gray, 20%);
+}
+
+.pieceRight {
+  height: 100%;
+  padding-left: 24px;
+}
+
+.paragraphWrap {
+  height: 100%;
+  padding-right: 24px;
+  overflow: auto;
+}
+
+.title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.imgWrap {
+  margin: 6px 0;
+  text-align: center;
+
+  img {
+    width: 180px;
+  }
+}
+
+.qName {
+  margin-bottom: 24px;
+  font-size: 20px;
+  white-space: pre-wrap;
+}
+
+.insertAnswer {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.paragraph {
+  margin-bottom: 1em;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 26px;
+  text-align: justify;
+
+  :global {
+    .option-area {
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(43, 114, 230);
+      }
+    }
+
+    .selected-area {
+      margin-right: 5px;
+      color: rgb(43, 114, 230);
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: @screen-sm) {
+  .pieceRight {
+    height: 50%;
+  }
+
+  .paragraphWrap {
+    padding-right: 0;
+  }
+}

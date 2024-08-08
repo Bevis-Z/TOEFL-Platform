@@ -1,0 +1,105 @@
+@import (reference) '~antd/es/style/themes/index';
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: fade(white, 80%);
+}
+.title {
+  margin-bottom: 60px;
+  font-weight: 500;
+  font-size: 22px;
+}
+.coupon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 380px;
+  height: 118px;
+  margin-bottom: 16px;
+  margin-bottom: 50px;
+  background-color: fade(rgb(129, 92, 251), 80%);
+  border-radius: 16px;
+  mask-image: radial-gradient(circle at right 133px bottom 8px, transparent 8px, red 8.5px),
+    radial-gradient(closest-side circle at 50%, red 99%, transparent 100%);
+  mask-size: 100%, 6px 14px;
+  mask-repeat: repeat, repeat-y;
+  mask-position: 0 8px, calc(100% - 130px);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+
+  .couponLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    padding-right: 30px;
+    padding-left: 24px;
+
+    .couponLeftTop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .tips {
+      color: fade(white, 50%);
+      font-size: 12px;
+    }
+
+    .couponAmount {
+      color: #fc95fd;
+      font-weight: 600;
+      font-size: 32px;
+      .symbol {
+        font-size: 20px;
+      }
+    }
+  }
+  .couponRight {
+    width: 30%;
+    padding-bottom: 4px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+
+    .rest {
+      color: fade(white, 60%);
+      font-size: 12px;
+    }
+  }
+}
+.moreButton {
+  margin-bottom: 24px;
+  color: fade(white, 80%);
+
+  &:hover,
+  &:focus {
+    color: white;
+  }
+}
+.buyNowButton {
+  width: 100%;
+  max-width: 323px !important;
+  height: 52px !important;
+  margin-bottom: 40px !important;
+  background: linear-gradient(270deg, #4743ff 0%, #ea89e9 100%) !important;
+  border: 0 none !important;
+  border-radius: 13px !important;
+  box-shadow: 0 8px 20px 0 rgba(228, 104, 255, 0.35) !important;
+  transition: all 0.6s !important;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(270deg, #4743ff 0%, #ea89e9 100%) !important;
+    box-shadow: 0 10px 40px 0 rgba(228, 104, 255, 0.35) !important;
+    transform: translateY(-2px) !important;
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .coupon > * {
+    transform: scale(0.8);
+  }
+}

@@ -1,0 +1,67 @@
+.wrap {
+  width: 710px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.qName {
+  font-size: 18px;
+}
+
+.timeTips {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.timing {
+  color: fade(#4d45fe, 80%);
+  font-weight: 600;
+}
+
+.progressWrap {
+  display: flex;
+  justify-content: center;
+
+  :global(.ant-progress-inner) {
+    border-radius: 15px !important;
+  }
+}
+
+.tips {
+  height: 40px;
+  padding-top: 10px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.motionDots {
+  display: inline-block;
+  width: 22px;
+  text-align: left;
+
+  &::after {
+    display: inline-block;
+    overflow: hidden;
+    font-family: simsun;
+    vertical-align: bottom;
+    animation: dot 1s infinite step-start;
+    content: '...';
+  }
+}
+
+@keyframes dot {
+  0% {
+    width: 0;
+  }
+
+  33% {
+    width: 0.5em;
+  }
+
+  66% {
+    width: 1em;
+  }
+
+  100% {
+    width: 1.5em;
+  }
+}

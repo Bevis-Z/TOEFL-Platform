@@ -1,0 +1,91 @@
+.menuItem {
+  position: relative;
+  display: block;
+  color: fade(white, 80%);
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out 0s;
+
+  .menuItemName {
+    padding: 10px 30px 4px;
+  }
+
+  &:hover {
+    color: white;
+
+    &::after {
+      width: 100%;
+      background-color: white;
+    }
+  }
+
+  &::after {
+    display: block;
+    width: 0;
+    height: 4px;
+    margin-top: 2px;
+    border-radius: 2px;
+    transition: all 0.3s;
+    content: '';
+  }
+}
+.active {
+  color: white;
+
+  &::after {
+    width: 100%;
+    background-color: white;
+  }
+}
+
+.newTag {
+  position: absolute;
+  top: 4px;
+  right: 3px;
+  display: block;
+  color: fade(#fc1a1a, 90%);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.cutPrice {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  width: 62px;
+  transform: rotate(18deg);
+}
+
+.moreWrap {
+  padding: 4px 16px;
+  cursor: pointer;
+
+  .moreIcon {
+    position: relative;
+    top: 3px;
+    font-size: 24px;
+  }
+}
+
+.overlayWrap {
+  max-width: 260px;
+  padding: 20px 20px;
+
+  .menuItem {
+    padding: 0 16px;
+    border-radius: 10px;
+
+    .menuItemName {
+      padding: 4px 20px 2px;
+    }
+  }
+}
+
+.splitor {
+  margin: 8px 0;
+  background-color: rgba(255, 255, 255, 0.3);
+
+  &:first-child {
+    display: none;
+  }
+}

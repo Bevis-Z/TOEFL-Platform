@@ -1,0 +1,173 @@
+@import (reference) '~antd/es/style/themes/index';
+
+.modal {
+  width: 90% !important;
+  max-width: 960px;
+}
+.loginImgWrap {
+  width: 100%;
+  height: 100%;
+  background-image: url('~@/assets/imgs/login_left_img.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 20px;
+}
+.leftTexts {
+  position: relative;
+  top: 10%;
+  color: fade(white, 86%);
+  font-weight: 500;
+  font-size: 26px;
+  text-align: center;
+}
+.titles {
+  margin-bottom: 20px;
+  .title {
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+  }
+  .subtitle {
+    color: fade(white, 80%);
+    font-size: 14px;
+  }
+}
+
+.formWrap {
+  :global {
+    .ant-pro-form-login-main {
+      width: 100% !important;
+      min-width: 150px;
+      max-width: 328px;
+    }
+    .ant-form-item-explain-error {
+      padding-left: 20px;
+      color: fade(orange, 80%);
+    }
+  }
+}
+
+.formButton {
+  height: 48px !important;
+  font-weight: 500;
+  font-size: 20px !important;
+  background: linear-gradient(270deg, #4743ff 0%, #ea89e9 100%) !important;
+  border: 0 none;
+  box-shadow: rgba(228, 104, 255, 0.35) 0 12px 20px;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(270deg, #4743ff 0%, #ea89e9 100%) !important;
+    box-shadow: rgba(228, 104, 255, 0.35) 0 18px 30px;
+    transform: translateY(-2px);
+  }
+}
+
+.formInput {
+  position: relative;
+  height: 48px;
+  margin-right: 0 !important;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: white;
+  background: linear-gradient(
+    rgba(99, 106, 150, 0.4) 0%,
+    rgba(182, 186, 214, 0.25) 100%
+  ) !important;
+  border: 0 none !important;
+  border-radius: 30px !important;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 16px 22px, rgba(255, 255, 255, 0.3) 0 0 0 0.5px inset !important;
+
+  :global {
+    .ant-input {
+      padding-right: 4px !important;
+      padding-left: 4px !important;
+      color: white;
+      font-size: 16px;
+      background-color: transparent !important;
+      border-radius: 34px;
+    }
+    .ant-input-prefix {
+      color: white !important;
+    }
+    .ant-input-password-icon.anticon {
+      color: fade(white, 60%);
+
+      &:hover {
+        color: fade(white, 80%);
+      }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      transition: background-color 9000s ease-in-out 0s;
+      // -webkit-text-fill-color: white !important;
+    }
+  }
+}
+
+.captchaInput {
+  :global {
+    .ant-input {
+      width: 126px;
+    }
+  }
+}
+
+.captchaButton {
+  position: absolute !important;
+  right: 2px;
+  z-index: 1;
+  color: fade(white, 80%) !important;
+  font-size: 14px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: fade(white, 100%) !important;
+    background-color: transparent;
+  }
+
+  &::before {
+    background-color: transparent;
+  }
+}
+
+.inputPrefixWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-right: 7px;
+  background-color: fade(white, 20%);
+  border-radius: 50%;
+}
+
+.icon {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+@media (max-width: @screen-lg) {
+  .loginImgWrap {
+    height: 200px;
+    background-position: center 54%;
+  }
+}
+
+.typeChange {
+  margin-bottom: 30px;
+  padding-right: 10px;
+  color: fade(white, 80%);
+  font-size: 14px;
+  text-align: right;
+
+  &:hover {
+    color: fade(white, 100%);
+  }
+}

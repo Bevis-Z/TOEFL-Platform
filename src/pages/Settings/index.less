@@ -1,0 +1,94 @@
+.settingsWrap {
+  min-height: 100vh;
+  // overflow: hidden;
+  color: fade(white, 80%);
+  background-color: #291963;
+  background-image: url('~@/assets/bgimgs/home_first.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.starsWrap {
+  position: absolute;
+  width: 100%;
+  height: 224px;
+  background-image: url('~@/assets/bgimgs/home_stars.svg');
+  background-repeat: repeat;
+  background-position: center top;
+}
+
+.settingsLayout {
+  padding: 180px 24px 80px;
+}
+
+.settingsCard {
+  display: flex;
+  max-width: 960px;
+  min-height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: rgba(50, 61, 109, 0.5);
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 50px 100px, rgba(255, 255, 255, 0.3) 0 0 0 0.5px;
+  backdrop-filter: blur(30px);
+}
+
+.setTabs {
+  width: 200px;
+  min-height: 64px;
+  padding: 20px;
+  font-size: 14px;
+
+  .setTabsItem {
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover,
+    &.active {
+      color: white;
+      background-color: fade(white, 10%);
+      border-color: fade(white, 20%);
+    }
+
+    .icon {
+      position: relative;
+      top: 4px;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+  }
+}
+
+.setContent {
+  flex: 1;
+  padding: 30px 30px 150px;
+  // background: rgba(15, 14, 71, 0.3);
+  border-left: 0.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: rgba(31, 31, 71, 0.3) 0 50px 100px;
+  // backdrop-filter: blur(40px);
+}
+
+@media (max-width: 720px) {
+  .setTabs {
+    width: 85px;
+  }
+}
+
+@media (max-width: 550px) {
+  .settingsCard {
+    flex-direction: column;
+  }
+
+  .setTabs {
+    display: flex;
+    width: 100%;
+  }
+
+  .setContent {
+    border-left: 0 none;
+  }
+}

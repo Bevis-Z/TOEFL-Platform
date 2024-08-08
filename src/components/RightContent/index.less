@@ -1,0 +1,98 @@
+@import (reference) '~antd/es/style/themes/index';
+
+.overlayWrap {
+  padding-top: 6px;
+  color: fade(white, 80%);
+}
+
+.infoWrap {
+  padding: 4px 16px 10px;
+}
+
+.menu {
+  :global(.anticon) {
+    margin-right: 8px;
+  }
+  :global(.ant-dropdown-menu-item) {
+    min-width: 110px;
+  }
+}
+
+.right {
+  display: flex;
+  float: right;
+  margin-left: auto;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  > span {
+    vertical-align: middle;
+  }
+}
+
+.loginButton {
+  padding-right: 22px !important;
+  padding-left: 22px !important;
+  color: fade(white, 70%) !important;
+  background: linear-gradient(rgba(24, 32, 79, 0.3) 0%, rgba(24, 32, 79, 0.2) 100%) !important;
+  border-color: fade(white, 60%) !important;
+  transition: all 0.3s ease-in-out 0s !important;
+
+  &:hover {
+    color: fade(white, 90%) !important;
+    border-color: fade(white, 90%) !important;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 40px 80px;
+  }
+}
+
+.search {
+  padding: 0 12px;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+.account {
+  .name {
+    min-width: 40px;
+    max-width: 100px;
+    margin-left: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .downIcon {
+    margin-left: 4px;
+    font-size: 12px;
+  }
+}
+
+.avatar {
+  font-size: 17px !important;
+
+  :global(.ant-avatar-string) {
+    line-height: 27px !important;
+  }
+}
+
+@media only screen and (max-width: @screen-md) {
+  :global(.ant-divider-vertical) {
+    vertical-align: unset;
+  }
+
+  .name {
+    display: none;
+  }
+
+  .right {
+    .search {
+      display: none;
+    }
+  }
+}

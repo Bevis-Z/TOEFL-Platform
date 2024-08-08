@@ -1,0 +1,47 @@
+.wrapper {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.title {
+  max-width: 800px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.optionsWrap {
+  max-width: 800px;
+  min-height: 400px;
+  margin: 20px auto;
+}
+
+.judgeItem {
+  display: flex;
+  align-items: stretch;
+  min-height: 40px;
+  margin-bottom: 16px;
+  padding: 0 20px;
+  font-size: 18px;
+  background-color: #f2f6ff;
+  border-radius: 8px;
+
+  .option {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  .answer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+  }
+
+  &:not(:first-child) {
+    .answer {
+      cursor: pointer;
+    }
+  }
+}

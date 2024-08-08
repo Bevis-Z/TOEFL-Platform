@@ -1,0 +1,65 @@
+@import (reference) '~antd/es/style/themes/index';
+
+.pieceWrap {
+  height: 100%;
+  padding: 24px 24px;
+}
+
+.pieceLeft {
+  height: 100%;
+  padding-right: 24px;
+  padding-left: 8px;
+  overflow: auto;
+  border-right: 1px solid fade(gray, 20%);
+
+  :global(.ant-radio-wrapper) {
+    font-size: 18px;
+  }
+}
+
+.pieceRight {
+  height: 100%;
+  padding-left: 24px;
+}
+
+.paragraphWrap {
+  height: 100%;
+  padding-right: 24px;
+  overflow: auto;
+}
+
+.title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.imgWrap {
+  margin: 6px 0;
+  text-align: center;
+
+  img {
+    width: 180px;
+  }
+}
+
+.qName {
+  margin-bottom: 24px;
+  font-size: 20px;
+}
+
+.paragraph {
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 26px;
+  text-align: justify;
+}
+
+@media (max-width: @screen-sm) {
+  .pieceRight {
+    height: 50%;
+  }
+
+  .paragraphWrap {
+    padding-right: 0;
+  }
+}

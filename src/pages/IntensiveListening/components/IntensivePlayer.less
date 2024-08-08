@@ -1,0 +1,32 @@
+@disable-color: #ccc;
+
+.playerWrap {
+  display: flex;
+  align-items: center;
+}
+.sliderWrap {
+  flex: 1;
+  margin: 0 20px;
+}
+.control {
+  color: #9e9aff;
+  cursor: pointer;
+}
+.prev {
+  font-size: 30px;
+  &.disable {
+    color: @disable-color;
+    cursor: default;
+  }
+}
+.play {
+  font-size: 40px;
+  line-height: 40px;
+}
+.next {
+  font-size: 30px;
+  &.disable {
+    color: @disable-color;
+    cursor: default;
+  }
+}

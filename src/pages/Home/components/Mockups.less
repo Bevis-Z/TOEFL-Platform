@@ -1,0 +1,241 @@
+.betweenLayout {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+
+.mockup {
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0 0 0 0.5px inset;
+  backdrop-filter: blur(8px);
+  transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+
+@media (min-width: 450px) {
+  .mockupsWrap > * {
+    transform: rotateY(-20deg) rotateX(20deg);
+  }
+}
+
+.mockupsWrap {
+  position: relative;
+  top: 60px;
+  z-index: 4;
+  height: 100%;
+
+  .mockupSpeaking {
+    .betweenLayout();
+    .mockup();
+
+    position: absolute;
+    top: 10px;
+    left: 130px;
+    width: 298px;
+    height: 162px;
+    background-color: rgba(23, 12, 61, 0.2);
+
+    .desc {
+      margin-top: 16px;
+    }
+  }
+
+  .mockupReading {
+    .mockup();
+
+    position: absolute;
+    top: 80px;
+    left: 180px;
+    width: 680px;
+    min-height: 450px;
+    padding: 20px 26px;
+    background-color: rgba(27, 20, 57, 0.2);
+
+    .readingIcon {
+      position: absolute;
+      top: 20px;
+      right: 26px;
+    }
+  }
+
+  .mockupListening {
+    .betweenLayout();
+    .mockup();
+
+    position: absolute;
+    top: 370px;
+    left: 80px;
+    width: 400px;
+    height: 250px;
+    background-color: rgba(51, 84, 104, 0.4);
+
+    .icon {
+      width: 45px;
+    }
+
+    .mockupRightImg {
+      width: 176px;
+    }
+
+    .mockupLeft {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      padding-bottom: 10px;
+    }
+  }
+  .mockupWriting {
+    .betweenLayout();
+    .mockup();
+
+    position: absolute;
+    top: 340px;
+    left: 510px;
+    width: 388px;
+    height: 242px;
+    background-color: rgba(93, 49, 174, 0.4);
+    backdrop-filter: blur(6px);
+
+    .icon {
+      width: 45px;
+    }
+
+    .mockupRightImg {
+      width: 172px;
+    }
+
+    .mockupLeft {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.rotateUp {
+  transform: rotateY(0deg) rotateX(0deg);
+}
+
+.mockupsWrap:hover {
+  .mockupSpeaking {
+    .rotateUp();
+
+    transform: translate(-60px, -50px);
+  }
+  .mockupReading {
+    .rotateUp();
+
+    transform: translate(-10px, -10px);
+  }
+  .mockupListening {
+    .rotateUp();
+
+    transform: translate(-80px, -10px);
+  }
+  .mockupWriting {
+    .rotateUp();
+
+    transform: translate(-10px, -10px);
+  }
+}
+
+.cardTitle {
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: 'PingFangSC-Medium', 'PingFang SC';
+}
+
+.subTitle {
+  color: white;
+  font-weight: 100;
+  font-size: 14px;
+  font-family: 'PingFangSC-Thin', 'PingFang SC';
+}
+
+.readingItem {
+  display: flex;
+  margin-top: 24px;
+
+  .indexWrap {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    color: white;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    background-color: fade(#fff, 10%);
+    border-radius: 6px;
+
+    &.specialIndex {
+      background-color: #4e46fe;
+    }
+  }
+
+  .content {
+    flex: 1;
+    color: fade(white, 80%);
+  }
+
+  .bar {
+    width: 100%;
+    height: 6px;
+    margin-top: 8px;
+    background-color: fade(white, 10%);
+    border-radius: 3px;
+
+    &.specialBar {
+      background-image: linear-gradient(270deg, #4743ff 0%, #ea89e9 100%);
+    }
+  }
+
+  .bar:nth-child(2) {
+    width: 70%;
+  }
+
+  .bar:nth-child(3) {
+    width: 80%;
+  }
+}
+
+.tinyBars {
+  .tinyBarsItem {
+    width: 50%;
+    height: 6px;
+    margin-top: 8px;
+    background-color: fade(white, 10%);
+    border-radius: 3px;
+  }
+
+  .tinyBarsItem:first-child {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1234px) {
+  .mockupsWrap {
+    transform: scale(0.8);
+    transform-origin: -30px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .mockupsWrap {
+    transform: scale(0.6);
+    transform-origin: -30px 0;
+  }
+}
+
+@media (max-width: 414px) {
+  .mockupsWrap {
+    transform: scale(0.4);
+    transform-origin: -30px 0;
+  }
+}

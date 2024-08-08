@@ -1,0 +1,39 @@
+@import (reference) '~@/styles/variables.less';
+
+.headerWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: transparent;
+  transition: all 0.6s ease-in-out;
+  &.leaveTop {
+    background-color: rgba(23, 12, 61, 0.2);
+    backdrop-filter: blur(16px);
+  }
+}
+
+@-moz-document url-prefix('') {
+  .headerWrap {
+    &.leaveTop {
+      background-color: rgba(49, 28, 125, 0.9);
+    }
+  }
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  max-width: @layout-max-width;
+  height: @layout-header-height;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: white;
+  column-gap: 24px;
+}
+.menuWrap {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}

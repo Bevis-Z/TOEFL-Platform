@@ -1,0 +1,29 @@
+@import (reference) '~antd/es/style/themes/index';
+
+.container {
+  overflow: hidden;
+  background: rgba(20, 3, 99, 0.5);
+  border-radius: 12px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0 0 0 0.5px inset;
+  backdrop-filter: blur(20px) brightness(80%) saturate(150%);
+
+  :global {
+    .ant-dropdown-menu {
+      background-color: transparent;
+    }
+    .ant-dropdown-menu-item,
+    .ant-dropdown-menu-submenu-title {
+      color: fade(white, 80%);
+      &:hover {
+        color: fade(white, 100%);
+        background: fade(white, 8%);
+      }
+    }
+  }
+}
+
+@-moz-document url-prefix('') {
+  .container {
+    background: rgba(15, 14, 71, 0.86);
+  }
+}

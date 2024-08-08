@@ -1,0 +1,46 @@
+.motionTextWrap {
+  display: flex;
+
+  span {
+    min-width: 0.4em;
+    transform: scale(2) translateY(-100px) skewX(10deg) skewY(10deg) rotateZ(30deg);
+    opacity: 0;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: scale(2) translateY(-100px) skewX(10deg) skewY(10deg) rotateZ(30deg);
+    opacity: 0;
+    filter: blur(10px);
+  }
+
+  15% {
+    transform: scale(1) translateY(0) skewX(0deg) skewY(0deg) rotateZ(0deg);
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  60% {
+    transform: scale(1) translateY(0) skewX(0deg) skewY(0deg) rotateZ(0deg);
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  95% {
+    transform: scale(2) translateX(100px) skewX(10deg) skewY(10deg) rotateZ(30deg);
+    opacity: 0;
+    filter: blur(10px);
+  }
+
+  100% {
+    transform: scale(2) translateY(-100px) skewX(10deg) skewY(10deg) rotateZ(30deg);
+    opacity: 0;
+    filter: blur(10px);
+  }
+}

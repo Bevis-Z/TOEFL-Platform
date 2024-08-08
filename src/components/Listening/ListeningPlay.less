@@ -1,0 +1,45 @@
+.imgWrap {
+  text-align: center;
+  img {
+    width: 300px;
+  }
+}
+.textCenter {
+  text-align: center;
+}
+.sliderWrap {
+  min-width: 500px;
+  :global {
+    .ant-slider {
+      height: 22px;
+    }
+    .ant-slider-rail {
+      height: 14px;
+    }
+    .ant-slider-track {
+      height: 14px;
+    }
+    .ant-slider-step {
+      height: 14px;
+    }
+    .ant-slider-handle {
+      width: 24px;
+      height: 24px;
+    }
+
+    .ant-slider-disabled {
+      cursor: pointer;
+      .ant-slider-track {
+        background-color: rgba(158, 154, 255, 0.8) !important;
+      }
+      .ant-slider-handle,
+      .ant-slider-dot {
+        border-color: rgba(158, 154, 255, 0.8) !important;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.midText {
+  margin: 50px 0 30px;
+}

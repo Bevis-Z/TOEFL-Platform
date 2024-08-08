@@ -1,0 +1,51 @@
+@import (reference) '~antd/es/style/themes/index';
+
+.wrap {
+  font-family: @font-family;
+}
+
+.imgWrap {
+  text-align: center;
+  img {
+    width: 300px;
+  }
+}
+.textCenter {
+  text-align: center;
+}
+.sliderWrap {
+  min-width: 500px;
+  :global {
+    .ant-slider {
+      height: 22px;
+    }
+    .ant-slider-rail {
+      height: 14px;
+    }
+    .ant-slider-track {
+      height: 14px;
+    }
+    .ant-slider-step {
+      height: 14px;
+    }
+    .ant-slider-handle {
+      width: 24px;
+      height: 24px;
+    }
+
+    .ant-slider-disabled {
+      cursor: pointer;
+      .ant-slider-track {
+        background-color: #91d5ff !important;
+      }
+      .ant-slider-handle,
+      .ant-slider-dot {
+        border-color: #91d5ff !important;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.midText {
+  margin: 50px 0 30px;
+}
