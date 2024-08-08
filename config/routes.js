@@ -5,7 +5,7 @@ export default [
     routes: [
       {
         path: '/home',
-        name: '首页',
+        name: 'Home',
         layout: false,
         hideInMenu: true,
         component: './Home',
@@ -103,7 +103,7 @@ export default [
         hideInMenu: true,
         component: './MockReadReview',
       },
-      { path: '/pricing', name: '价格', layout: false, component: './Pricing' },
+      { path: '/pricing', name: 'Price', layout: false, component: './Pricing' },
       { path: '/wrong', name: '错题', layout: false, component: './WrongQuestions' },
       { path: '/', redirect: '/home' },
       { redirect: '/home' },

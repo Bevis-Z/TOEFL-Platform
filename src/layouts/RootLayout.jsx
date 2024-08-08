@@ -16,7 +16,7 @@ const RootLayout = ({ children, route }) => {
       const matchedRoute = routes.find(({ path }) => path === pathname) || {}
       const routeName = matchedRoute.name || '托福来了'
 
-      document.title = `${routeName} - 托福来了在线备考平台`
+      document.title = `${routeName} - Demo Version`
     }
 
     setTitleByPathname(history.location.pathname)
